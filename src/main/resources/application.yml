@@ -1,0 +1,29 @@
+spring:
+  profiles:
+    active: dev
+  mvc:
+    servlet:
+      load-on-startup: 0
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 200MB
+server:
+  port: 8888
+  max-http-header-size: 1MB
+  ssl:
+    enabled: false
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+    max-http-form-post-size: 100MB
+    max-connections: 500
+    accept-count: 200
+    threads:
+      max: 300
+      min-spare: 20
+
+logging:
+  level:
+    org.wjh: info
